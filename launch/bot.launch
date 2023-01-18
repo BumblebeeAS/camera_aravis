@@ -1,0 +1,16 @@
+<launch>
+  <arg name="ns"/>
+
+  <group ns="$(arg ns)">
+    <node name="bot_cam" pkg="camera_aravis" type="camnode" output="screen">
+      <rosparam file="$(find camera_aravis)/config/$(arg ns)/bot.yaml"/>
+    </node>
+
+    <node pkg="nodelet" type="nodelet" name="debayer" ns="bot_cam" args="standalone image_proc/debayer"/>
+    <node pkg="nodelet" type="nodelet" name="rectify_mono" ns="bot_cam" args="standalone image_proc/rectify"/>
+    <node pkg="nodelet" type="nodelet" name="rectify_color" ns="bot_cam" args="standalone image_proc/rectify">
+      <remap from="image_mono" to="image_color"/>
+      <remap from="image_rect" to="image_rect_color"/>
+    </node>
+  </group>
+</launch>

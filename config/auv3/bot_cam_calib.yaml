@@ -1,0 +1,20 @@
+image_width: 1024
+image_height: 768
+camera_name: bot_cam
+camera_matrix:
+  rows: 3
+  cols: 3
+  data: [643.2428827592039, 0.0, 483.2433024797124, 0.0, 643.1404539263965, 414.5733520571109, 0.0, 0.0, 1.0]
+distortion_model: plumb_bob
+distortion_coefficients:
+  rows: 1
+  cols: 5
+  data: [-0.3274894164879583, 0.09468109929965463, -0.00040429238995981075, -0.00013587028477088134, 0.0]
+rectification_matrix:
+  rows: 3
+  cols: 3
+  data: [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0]
+projection_matrix:
+  rows: 3
+  cols: 4
+  data: [484.4046325683594, 0.0, 468.175885971501, 0.0, 0.0, 553.956787109375, 424.73869409711915, 0.0, 0.0, 0.0, 1.0, 0.0]

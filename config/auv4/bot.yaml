@@ -1,0 +1,25 @@
+guid: FLIR-19444684
+camera_info_url: package://camera_aravis/config/auv4/bot_cam_calib.yaml
+camera_name: bot_cam
+
+Acquire: True
+ExposureAuto: Continuous
+GainAuto: Continuous
+ExposureTimeAbs: 2000.0
+Gain: 1.0
+
+BalanceWhiteAuto: Continuous
+
+AcquisitionMode: Continuous
+AcquisitionFrameRate: 30.0
+AcquisitionFrameRateEnable: True
+
+TriggerMode: Off
+
+BinningHorizontal: 2
+BinningVertical: 2
+
+frame_id: bot_cam
+
+PixelFormat: BayerRG8
+mtu: 9000
