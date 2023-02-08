@@ -1,6 +1,6 @@
 camera_aravis - forked from a deleted github repo (https://github.com/CaeruleusAqua/camera_aravis), which was itself forked from ssafarik: https://github.com/ssafarik/camera_aravis.
 
-This ROS node works with aravis version 0.3.7: ftp://ftp.acc.umu.se/pub/GNOME/sources/aravis/0.3
+This ROS node works with aravis version 0.6.0 that comes with Ubuntu 20.04 i.e. `sudo apt-get install aravis-tools libaravis-dev`
 
 This is a [ROS](http://ros.org) package for the [Aravis GigEVision
 library](http://live.gnome.org/Aravis). It is open source, under the
