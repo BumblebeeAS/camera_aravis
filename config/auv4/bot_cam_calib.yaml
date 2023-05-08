@@ -1,6 +1,6 @@
 image_width: 1024
 image_height: 768
-camera_name: bot_cam
+camera_name: auv4/bot_cam
 camera_matrix:
   rows: 3
   cols: 3

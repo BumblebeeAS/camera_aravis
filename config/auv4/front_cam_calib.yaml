@@ -1,6 +1,6 @@
 image_width: 1024
 image_height: 768
-camera_name: front_cam
+camera_name: auv4/front_cam
 camera_matrix:
   rows: 3
   cols: 3
