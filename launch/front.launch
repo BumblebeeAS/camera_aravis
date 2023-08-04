@@ -2,7 +2,7 @@
   <arg name="ns"/>
 
   <group ns="$(arg ns)">
-    <node name="front_cam" pkg="camera_aravis" type="camnode" output="screen">
+    <node name="front_cam" pkg="camera_aravis" type="camnode" output="screen" respawn="true">
       <rosparam file="$(find camera_aravis)/config/$(arg ns)/front.yaml"/>
     </node>
 
