@@ -1,10 +1,33 @@
+# image_width: 1024
+# image_height: 768
+# camera_name: auv4/front_cam
+# camera_matrix:
+#   rows: 3
+#   cols: 3
+#   data: [524.239452332572, 0.0, 512.5609236720422, 0.0, 522.0993434393138, 378.4650623611407, 0.0, 0.0, 1.0]
+# distortion_model: plumb_bob
+# distortion_coefficients:
+#   rows: 1
+#   cols: 5
+#   data: [-0.186110423256666, 0.04678219675274563, -0.0006451763021527117, -0.0006795068914609344, 0.0]
+# rectification_matrix:
+#   rows: 3
+#   cols: 3
+#   data: [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0]
+# projection_matrix:
+#   rows: 3
+#   cols: 4
+#   data: [436.40875244140625, 0.0, 510.88065980075044, 0.0, 0.0, 467.6256103515625, 376.3738157469634, 0.0, 0.0, 0.0, 1.0, 0.0]
+
+
 image_width: 1024
 image_height: 768
-camera_name: auv4/front_cam
+camera_name: auv4/front_cam_optical
 camera_matrix:
   rows: 3
   cols: 3
-  data: [524.239452332572, 0.0, 512.5609236720422, 0.0, 522.0993434393138, 378.4650623611407, 0.0, 0.0, 1.0]
+  # data: [524.239452332572, 0.0, 512.5609236720422, 0.0, 522.0993434393138, 378.4650623611407, 0.0, 0.0, 1.0]
+  data: [1048.478904665, 0.0, 1025.121847344, 0.0, 1044.198686879, 756.930124722, 0.0, 0.0, 1.0]
 distortion_model: plumb_bob
 distortion_coefficients:
   rows: 1

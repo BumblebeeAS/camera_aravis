@@ -12,5 +12,12 @@
       <remap from="image_mono" to="image_color"/>
       <remap from="image_rect" to="image_rect_color"/>
     </node>
+    <node pkg="nodelet" type="nodelet" name="debayer" ns="front_cam_rect" args="standalone image_proc/debayer"/>
+    <!-- <rosparam file="$(find camera_aravis)/config/auv4/front_cam_calib_old.yaml"/> -->
   </group>
+  <!-- <include file="$(find camera_aravis)/launch/undistort_camera.launch">
+    <arg name="vehicle_name"                value="auv4"/>
+    <arg name="input_camera_name"           value="front_cam"/>
+    <arg name="calib_path"                  value="$(find camera_aravis)/config/auv4/front_undistort_config.yaml"/>
+  </include> -->
 </launch>

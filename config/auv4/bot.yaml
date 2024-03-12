@@ -7,11 +7,10 @@ ExposureAuto: Continuous
 GainAuto: Continuous
 ExposureTimeAbs: 2000.0
 Gain: 1.0
-
 BalanceWhiteAuto: Continuous
 
 AcquisitionMode: Continuous
-AcquisitionFrameRate: 30.0
+AcquisitionFrameRate: 20.0
 AcquisitionFrameRateEnable: True
 
 TriggerMode: Off

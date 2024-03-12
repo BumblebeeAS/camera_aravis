@@ -1,0 +1,29 @@
+<launch>
+
+<arg name="vehicle_name" default="auv4" />
+<arg name="namespace" default="$(arg vehicle_name)" />
+<arg name="input_camera_name" default="front_cam" />
+<arg name="output_camera_name" default="$(arg input_camera_name)" />
+<arg name="scale" default="1.0" />
+<arg name="calib_path" default="$(find image_undistort)/cfg/bot_undistort_config.yaml"/>
+
+<group ns="$(arg namespace)">
+
+  <node name="$(arg input_camera_name)_image_undistort_node" pkg="image_undistort" type="image_undistort_node" output="screen" clear_params="true">
+    <param name="input_camera_namespace" value="$(arg input_camera_name)"/>
+    <param name="input_camera_info_from_ros_params" value = "true"/>
+    <param name="output_camera_info_source" value="match_input" />
+    <param name="output_camera_namespace" value="$(arg output_camera_name)"/>
+    <param name="output_frame" value = "$(arg namespace)/$(arg output_camera_name)_optical"/>
+    <param name="output_camera_info_from_ros_params" value = "true"/>
+    <param name="output_image_type" value="bgr8"/>
+    <param name="scale" value="$(arg scale)"/>
+    <rosparam file="$(arg calib_path)"/>
+    <remap from="input/image" to="$(arg input_camera_name)/image_raw"/>
+    <remap from="input/camera_info" to="$(arg input_camera_name)/camera_info"/>
+    <remap from="output/image" to="$(arg input_camera_name)_rect/image_raw"/>
+    <remap from="output/camera_info" to="$(arg input_camera_name)_rect/camera_info"/>
+  </node>
+</group>
+
+</launch>
