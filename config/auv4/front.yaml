@@ -18,6 +18,8 @@ TriggerMode: Off
 
 BinningHorizontal: 2
 BinningVertical: 2
+# Width: 2048
+# Height: 1536
 
 frame_id: auv4/front_cam_optical
 

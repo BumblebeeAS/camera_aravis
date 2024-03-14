@@ -13,11 +13,12 @@
       <remap from="image_rect" to="image_rect_color"/>
     </node>
     <node pkg="nodelet" type="nodelet" name="debayer" ns="bot_cam_rect" args="standalone image_proc/debayer"/>
-    <!-- <rosparam file="$(find camera_aravis)/config/auv4/bot_cam_calib.old.yaml"/> -->
+    <rosparam file="$(find camera_aravis)/config/auv4/bot_cam_calib.yaml"/>
   </group>
-  <!-- <include file="$(find camera_aravis)/launch/undistort_camera.launch">
+  <include file="$(find camera_aravis)/launch/undistort_camera.launch">
     <arg name="vehicle_name"                value="auv4"/>
     <arg name="input_camera_name"           value="bot_cam"/>
     <arg name="calib_path"                  value="$(find camera_aravis)/config/auv4/bot_undistort_config.yaml"/>
-  </include> -->
+    <arg name="scale"                       value="0.5"/>
+  </include>
 </launch>
